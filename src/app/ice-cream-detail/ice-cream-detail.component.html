@@ -1,0 +1,11 @@
+<div *ngIf="iceCream">
+  <h2>{{ iceCream.name | uppercase }} Details</h2>
+  <div><span>{{ iceCream.id }}: </span>{{ iceCream.name }}</div>
+
+  <div>
+    <label
+      >Change Rating:
+      <input [(ngModel)]="iceCream.rating" placeholder="rating" />
+    </label>
+  </div>
+</div>

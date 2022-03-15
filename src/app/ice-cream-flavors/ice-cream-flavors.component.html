@@ -1,0 +1,14 @@
+<h2>Ice Cream List:</h2>
+<ul class="iceCream">
+  <li
+    *ngFor="let iceCream of iceCreamFlavors"
+    [class.selected]="iceCream === selectedIceCream"
+    (click)="onSelect(iceCream)"
+  >
+    <span class="badge">{{ iceCream.id }}</span>
+    {{ iceCream.name }} | <i>{{ iceCream.rating }} out of 10</i> | 
+    <i>{{ iceCream.description }}</i>
+  </li>
+</ul>
+
+<app-ice-cream-detail [iceCream]="selectedIceCream"></app-ice-cream-detail>
